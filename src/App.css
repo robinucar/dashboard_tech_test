@@ -48,3 +48,15 @@ td {
   width: 250px;
   font-size: 20px;
 }
+
+.tickets-data {
+  border: 1px solid #000;
+  padding: 10px;
+  text-align: center;
+}
+.organisers {
+  border: 1px solid #000;
+  padding: 10px;
+  margin: 10px;
+  text-align: center;
+}

@@ -1,4 +1,4 @@
-import './App.css';
+import "./App.css";
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import DataTable from "./components/DataTable";
@@ -31,7 +31,7 @@ function App() {
     }
     return total;
   }, 0);
-// TOTAL PENDING TICKETS SALES
+  // TOTAL PENDING TICKETS SALES
   const pendingTicketsSum = data.reduce((total, item) => {
     if (item.status === "PENDING") {
       total += item.ticketPrice.value;
@@ -48,18 +48,26 @@ function App() {
   }, 0);
   //GREAT RUN TOTAL
   const greatRunTotal = data.reduce((total, item) => {
-    if(item.organiserId === 26391) {
-      total += item.ticketPrice.value
+    if (item.organiserId === 26391) {
+      total += item.ticketPrice.value;
     }
     return total;
-  }, 0 )
-
+  }, 0);
+  // Limelight Sports Club Total
   const sportsClubTotal = data.reduce((total, item) => {
-    if(item.organiserId === 154979) {
-      total += item.ticketPrice.value
+    if (item.organiserId === 154979) {
+      total += item.ticketPrice.value;
     }
     return total;
-  }, 0 )
+  }, 0);
+
+  // Run Through Total
+  const runThroughTotal = data.reduce((total, item) => {
+    if (item.organiserId === 69173) {
+      total += item.ticketPrice.value;
+    }
+    return total;
+  }, 0);
   return (
     <div className="app">
       <input
@@ -68,18 +76,26 @@ function App() {
         onChange={(e) => setQuery(e.target.value.toLowerCase())}
       />
       <DataTable data={search(data)} />
-      <div className='tickets-data'>
+      <div className="tickets-data">
         <h2>Total Confirmed Tickets Sales: {confirmedTicketsSum} GBP</h2>
         <h2>Total Pending Tickets Sales: {pendingTicketsSum} GBP</h2>
         <h2>Total Refunded Tickets Sales: {refundedTicketsSum} GBP</h2>
       </div>
 
-      <div>
-        <h1>Orginisers ticket sales</h1>
-        <h2>Total for Great Run Confirmed Tickets Sales: {greatRunTotal} GBP</h2>
-        <h2>Total for Limelight Sports Club Confirmed Tickets Sales: {sportsClubTotal} GBP</h2>
+      <div className="organisers">
+        <h1>Organisers ticket sales</h1>
+        <h2>
+          Total for Great Run Confirmed Tickets Sales: {greatRunTotal} GBP
+        </h2>
+        <h2>
+          Total for Limelight Sports Club Confirmed Tickets Sales:{" "}
+          {sportsClubTotal} GBP
+        </h2>
+        <h2>
+          Total for Run Through Confirmed Tickets Sales: {runThroughTotal} GBP
+        </h2>
       </div>
-      </div>
+    </div>
   );
 }
 
