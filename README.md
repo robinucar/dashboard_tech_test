@@ -85,3 +85,18 @@ I would like to see the ticket details filtered by organiser title.
 As a user,
 I can see the total confirmed ticket sales,
 I would like to see total amount  on my browser.
+
+### USER STORY 4
+As a user,
+I can see the total pending ticket sales,
+I would like to see total amount  on my browser.
+
+### USER STORY 5
+As a user,
+I can see the total refunded ticket sales,
+I would like to see total amount  on my browser.
+
+### USER STORY 6
+As a organiser,
+I can see the total of tickets I sold,
+I would like to see total amount  on my browser.

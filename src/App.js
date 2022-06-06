@@ -31,6 +31,28 @@ function App() {
     }
     return total;
   }, 0);
+// TOTAL PENDING TICKETS SALES
+  const pendingTicketsSum = data.reduce((total, item) => {
+    if (item.status === "PENDING") {
+      total += item.ticketPrice.value;
+    }
+    return total;
+  }, 0);
+
+  // TOTAL REFUNDED TICKETS SALES
+  const refundedTicketsSum = data.reduce((total, item) => {
+    if (item.status === "REFUNDED") {
+      total += item.ticketPrice.value;
+    }
+    return total;
+  }, 0);
+  //GREAT RUN TOTAL
+  const greatRunTotal = data.reduce((total, item) => {
+    if(item.organiserId === 26391) {
+      total += item.ticketPrice.value
+    }
+    return total;
+  }, 0 )
   return (
     <div className="app">
       <input
@@ -41,6 +63,13 @@ function App() {
       <DataTable data={search(data)} />
       <div className='tickets-data'>
         <h2>Total Confirmed Tickets Sales: {confirmedTicketsSum} GBP</h2>
+        <h2>Total Pending Tickets Sales: {pendingTicketsSum} GBP</h2>
+        <h2>Total Refunded Tickets Sales: {refundedTicketsSum} GBP</h2>
+      </div>
+
+      <div>
+        <h1>Orginisers ticket sales</h1>
+        <h2>Total for Great Run Sports Club Confirmed Tickets Sales: {greatRunTotal} GBP</h2>
       </div>
       </div>
   );
