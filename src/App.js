@@ -7,6 +7,7 @@ import "./App.css";
 function App() {
   const [data, setData] = useState([]);
   useEffect(() => {
+    // connect data
     const fetchData = async () => {
       const res = await axios.get(
         "https://ldt-tech-test.herokuapp.com/api/startlistentries"
