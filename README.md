@@ -75,3 +75,8 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 As a user,
 I can see some of event details,
 I would like to see data details on my browser.
+
+### USER STORY 2
+As a organiser,
+I can see tickets I sold so far,
+I would like to see the ticket details filtered by organiser title.

@@ -16,6 +16,9 @@ function App() {
     };
     fetchData();
   }, []);
+
+  
+
   return (
     <div className="App">
       <DataTable data={data} />
