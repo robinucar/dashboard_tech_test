@@ -80,3 +80,8 @@ I would like to see data details on my browser.
 As a organiser,
 I can see tickets I sold so far,
 I would like to see the ticket details filtered by organiser title.
+
+### USER STORY 3
+As a user,
+I can see the total confirmed ticket sales,
+I would like to see total amount  on my browser.

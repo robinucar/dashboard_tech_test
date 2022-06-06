@@ -24,6 +24,13 @@ function App() {
       (data) => data.organiserTitle.toLowerCase().indexOf(query) > -1
     );
   };
+  // TOTAL CONFIRMED TICKETS SALES
+  const confirmedTicketsSum = data.reduce((total, item) => {
+    if (item.status === "CONFIRMED") {
+      total += item.ticketPrice.value;
+    }
+    return total;
+  }, 0);
   return (
     <div className="app">
       <input
@@ -32,6 +39,9 @@ function App() {
         onChange={(e) => setQuery(e.target.value.toLowerCase())}
       />
       <DataTable data={search(data)} />
+      <div className='tickets-data'>
+        <h2>Total Confirmed Tickets Sales: {confirmedTicketsSum} GBP</h2>
+      </div>
       </div>
   );
 }
