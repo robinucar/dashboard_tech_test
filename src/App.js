@@ -53,6 +53,13 @@ function App() {
     }
     return total;
   }, 0 )
+
+  const sportsClubTotal = data.reduce((total, item) => {
+    if(item.organiserId === 154979) {
+      total += item.ticketPrice.value
+    }
+    return total;
+  }, 0 )
   return (
     <div className="app">
       <input
@@ -69,7 +76,8 @@ function App() {
 
       <div>
         <h1>Orginisers ticket sales</h1>
-        <h2>Total for Great Run Sports Club Confirmed Tickets Sales: {greatRunTotal} GBP</h2>
+        <h2>Total for Great Run Confirmed Tickets Sales: {greatRunTotal} GBP</h2>
+        <h2>Total for Limelight Sports Club Confirmed Tickets Sales: {sportsClubTotal} GBP</h2>
       </div>
       </div>
   );
