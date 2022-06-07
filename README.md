@@ -100,3 +100,37 @@ I would like to see total amount  on my browser.
 As a organiser,
 I can see the total of tickets I sold,
 I would like to see total amount  on my browser.
+
+
+
+
+# IMPROVEMENTS
+
+## REUSABILITY
+
+### I wrote 3 separete functions for confirmed, pending, refaunded tickets to calculate total for each type. However 1 should enough.
+      const generateStatusTicketsSum = (items, type) => {
+        return items.reduce((total, item) => {
+            if (item.status === type) {
+                total += item.ticketPrice.value;
+            }
+            return total;
+        }, 0);
+      };
+
+### I also wrote 3 separete functions for each organisers total. However 1 should be enough.
+    const generateOrganiserTicketsSum = (items, id) => {
+  return items.reduce((total, item) => {
+    if (item.organiserId === id) {
+      total += item.ticketPrice.value;
+    }
+    return total;
+  }, 0);
+};
+
+## TDD
+### I can write unit tests using JEST and React Testing Library
+
+## CSS
+
+### I can do better styling using pure css or sass, Also I can import some css framework such as Bootstrap or MaterialUI 
