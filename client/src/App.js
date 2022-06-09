@@ -11,12 +11,12 @@ function App() {
     // connect data
     const fetchData = async () => {
       const res = await axios.get(
-        "http://localhost:5000/api/startlistentries"
+        "https://ldt-tech-test.herokuapp.com/api/startlistentries"
       );
       setData(res.data);
     };
     fetchData();
-  }, []);
+  }, [setData]);
 
   // Filter data
   const search = (data) => {
