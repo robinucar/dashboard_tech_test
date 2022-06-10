@@ -1,3 +1,4 @@
+import {format} from 'date-fns'
 const DataTable = ({ data }) => {
     return (
       <table>
@@ -13,11 +14,11 @@ const DataTable = ({ data }) => {
           </tr>
           {data.map((item,index) => (
             <tr key={item.id + index}>
-              <td>{item.bookingDate}</td>
+              <td>{format(new Date(item.bookingDate),'dd/mm/yyyy' )}</td>
               <td>{item.firstName}</td>
               <td>{item.lastName}</td>
-              <td>{item.eventTitle}</td>
               <td>{item.status}</td>
+              <td>{item.eventTitle}</td>
               <td>{item.ticketPrice.originalValue + ' ' + item.ticketPrice.currencyCode}</td>
               <td>{item.organiserTitle}</td>
             </tr>
