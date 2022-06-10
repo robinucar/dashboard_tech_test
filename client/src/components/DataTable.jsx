@@ -1,7 +1,8 @@
 import {format} from 'date-fns'
+import './DataTable.css'
 const DataTable = ({ data }) => {
     return (
-      <table>
+      <table className='data'>
         <tbody>
           <tr>
             <th>DATE</th>

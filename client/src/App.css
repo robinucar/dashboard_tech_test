@@ -1,5 +1,5 @@
 .app {
-  margin: 50px;
+  margin: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -12,26 +12,19 @@
   padding: 10px;
   font-size: 20px;
   text-align: center;
+  margin-top: 25px;
+  border-radius: 15px;
+  outline: none;
 }
 
-.list {
-  padding: 0;
-  list-style: none;
-  text-align: center;
-}
 
-.listItem {
-  margin-bottom: 20px;
-  font-size: 25px;
-  color: #444;
-  font-weight: 300;
-}
 
 table {
   width: 100%;
-  margin: 50px 0px;
+  margin: 50px 10px;
   border-spacing: 15px;
   color: #444;
+  text-align: center;
 }
 
 tr {
