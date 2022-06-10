@@ -106,27 +106,10 @@ I would like to see total amount  on my browser.
 
 # IMPROVEMENTS
 
-## REUSABILITY
+## SORT ALL DATA BY RACE START DATE
+## SEARCH FUNCTION SHOUD ALSO WORK BY ORGANISERID, FIRSTNAME, LASTNAME, DATE
+## RIGHT NOW WE ARE SEEING ALL ORGANISER TICKET SALES REPORT AT THE BOTTOM OF PAGE. WHICH CAN BE HIDE INSTEAD OF THAT WE SHOULD CREATE ORGANISER AUTHENTICATION. AND EACH ORGANISER SHOULD SEE THEIR OWN REPORT
 
-### I wrote 3 separete functions for confirmed, pending, refaunded tickets to calculate total for each type. However 1 should enough.
-      const generateStatusTicketsSum = (items, type) => {
-        return items.reduce((total, item) => {
-            if (item.status === type) {
-                total += item.ticketPrice.value;
-            }
-            return total;
-        }, 0);
-      };
-
-### I also wrote 3 separete functions for each organisers total. However 1 should be enough.
-    const generateOrganiserTicketsSum = (items, id) => {
-  return items.reduce((total, item) => {
-    if (item.organiserId === id) {
-      total += item.ticketPrice.value;
-    }
-    return total;
-  }, 0);
-};
 
 ## TDD
 ### I can write unit tests using JEST and React Testing Library
