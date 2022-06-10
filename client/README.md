@@ -117,3 +117,7 @@ I would like to see total amount  on my browser.
 ## CSS
 
 ### I can do better styling using pure css or sass, Also I can import some css framework such as Bootstrap or MaterialUI 
+
+
+## Test issue 
+#### This issua is a dependency/enviroment issue. I made lots of research changed the @babel config. But unfortunatelly I have not sorted so far. I am still trying to sort it out.
